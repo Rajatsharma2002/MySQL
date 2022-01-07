@@ -1,0 +1,29 @@
+use db1;
+
+CREATE TABLE CLIENT_MASTER (CLIENTNO varchar(6),
+NAME varchar(20),
+ADDRESS1 varchar(30),
+ADDRESS2 varchar(30),
+CITY varchar(15),
+PINCODE integer,
+STATE varchar(15),
+BALDUE decimal(10,2));
+
+select * from CLIENT_MASTER;
+
+INSERT INTO CLIENT_MASTER(CLIENTNO , NAME , CITY , PINCODE , STATE , BALDUE)VALUES('C00001' , 'Ivan bayross' , 'Mumbai', 400054 , 'Maharashtra' , 15000);
+INSERT INTO CLIENT_MASTER(CLIENTNO , NAME , CITY , PINCODE , STATE , BALDUE)VALUES('C00002' , 'Mamta muzumbar' , 'Madras', 780001 , 'Tamil nadu' , 0);
+INSERT INTO CLIENT_MASTER(CLIENTNO , NAME , CITY , PINCODE , STATE , BALDUE)VALUES('C00003' , 'Chhaya bankar' , 'Mumbai', 400057 , 'Maharashtra' , 5000);
+INSERT INTO CLIENT_MASTER(CLIENTNO , NAME , CITY , PINCODE , STATE , BALDUE)VALUES('C00004' , 'Ashwani joshi' , 'Bangalore', 560001 , 'Karnataka' , 0);
+INSERT INTO CLIENT_MASTER(CLIENTNO , NAME , CITY , PINCODE , STATE , BALDUE)VALUES('C00005' , 'Hansel colaco' , 'Mumbai', 400060 , 'Maharashtra' , 2000);
+INSERT INTO CLIENT_MASTER(CLIENTNO , NAME , CITY , PINCODE , STATE , BALDUE)VALUES('C00006' , 'Deepak sharma' , 'Mangalore', 560050 , 'Karnataka' , 0);
+INSERT INTO CLIENT_MASTER(CLIENTNO , NAME , CITY , PINCODE , STATE , BALDUE)VALUES('C00007' , 'adesh sharma' , 'Chennai', 560051 , 'Karnataka' , 2000);
+
+select * from CLIENT_MASTER;
+
+UPDATE CLIENT_MASTER
+    	SET BALDUE=11000
+    	WHERE CLIENTNO ='C00001';
+        
+delete from CLIENT_MASTER WHERE CITY='Chennai';
+
