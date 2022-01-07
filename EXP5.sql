@@ -73,15 +73,13 @@ where SAL in (select sal from emp where (ename = 'FORD' or ename = 'SMITH'))  or
 select emp.emp_no, emp.ename, emp.job, emp.mgr , emp.hiredate ,emp.sal ,emp.comm,dept.deptno ,dept.dname,dept.loc from emp left join dept on emp.deptno=dept.deptno
 where job = (select job from emp where ename = 'miller') or sal > (select sal from emp where ename = 'allen') ;
 
-select EMP.ename from emp inner join dept on emp.deptno = dept.deptno
-where sal = (select max(sal) from emp
-where deptno = (select deptno from dept where dname = 'sales')) ;
-
-
 Select emp.ENAME from EMP right join dept on dept.deptno=emp.deptno
 where HIREDATE < (select max(hiredate) from emp 
 where MGR in (select EMP_NO from emp where ENAME = 'king')) ;
 
+select EMP.ename from emp inner join dept on emp.deptno = dept.deptno
+where sal = (select max(sal) from emp
+where deptno = (select deptno from dept where dname = 'sales')) ;
 
 select emp.ENAME ,emp.DEPTNO from emp inner join dept on emp.deptno=dept.deptno
 where sal in (select max(sal) from emp group by DEPTNO);
