@@ -1,5 +1,4 @@
 use exp;
-
 create table DEPT(DEPTNO INTEGER PRIMARY KEY ,
 DNAME VARCHAR(15),
 LOC VARCHAR(15));
