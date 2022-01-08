@@ -31,8 +31,6 @@ ALTER SEQUENCE emp_seq
 
 ALTER SEQUENCE emp_seq 
    MAXVALUE 1000 ;
-   
-
 
 drop sequence emp_seq ; 
 
