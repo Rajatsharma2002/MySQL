@@ -35,7 +35,8 @@ savepoint sp4;
 delete from info where attribute_id = 'A0001' ; 
 savepoint sp5;
 
-rollback to sp4;
+
 rollback to sp3;
+rollback to sp4;
 rollback to sp2;
 rollback to sp1;
