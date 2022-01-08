@@ -29,6 +29,7 @@ UPDATE EMP_view set salary =45000 where emp_id='e0006';
 UPDATE EMP_view set l_name ='hopper' where salary=10000;
 UPDATE EMP_view set salary =65000 where dept_no='d0005';
 UPDATE EMP_view set dept_no ='d0011' where l_name='mcall';
+UPDATE EMP_view set dept_no ='d0030' where l_name='saini';
 
 delete from EMP_view where salary=80000;
 delete from EMP_view where l_name='hopper';
