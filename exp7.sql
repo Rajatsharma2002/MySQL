@@ -28,7 +28,6 @@ create index reverse_idx on employees(employee_id) REVERSE ;
 insert into employees(employee_id ,first_name , last_name , salary , department_id)values('e0004' , 'samir' , 'sharma' , 80000 , 'd0004') ;
 create unique index uni_idx on employees(employee_id) ; 
 
-
 CREATE INDEX emp_idx ON employees (UPPER(last_name));
 
 drop index emp_idx ;
